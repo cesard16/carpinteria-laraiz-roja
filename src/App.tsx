@@ -69,7 +69,7 @@ const Navbar = ({ lang, setLang }: { lang: Language, setLang: (l: Language) => v
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <a href="#" className="flex items-center gap-2 group">
           <div className="h-10 w-auto rounded-sm transition-transform group-hover:scale-105 overflow-hidden bg-white/10 p-1">
-            <img src="https://www.carpinterialaraiz.mx/wp-content/uploads/2022/01/Mesa-de-trabajo-1-2x-8-3.png" alt="La Raíz Roja Logo" className="h-full w-full object-contain filter brightness-0 invert" />
+            <img src="https://www.carpinterialaraiz.mx/wp-content/uploads/2022/01/Mesa-de-trabajo-1-2x-8-3.png" alt="La Raíz Logo" className="h-full w-full object-contain filter brightness-0 invert" />
           </div>
           <span className={`text-2xl font-serif font-semibold tracking-tight ${isScrolled ? 'text-stone-900' : 'text-white'}`}>
             La Raíz <span className="font-light text-rose-500">Roja</span>
@@ -272,26 +272,26 @@ const Portfolio = ({ lang }: SectionProps) => {
   const [activeCategory, setActiveCategory] = useState(lang === 'es' ? 'Todos' : 'All');
   
   const categories = {
-    es: ['Todos', 'Cocinas', 'Closets', 'Comedores', 'Salas', 'Oficinas'],
-    en: ['All', 'Kitchens', 'Closets', 'Dining', 'Living', 'Office']
+    es: ['Todos', 'Cocinas', 'Closets', 'Puertas', 'Lavanetas', 'Comercial'],
+    en: ['All', 'Kitchens', 'Closets', 'Doors', 'Vanities', 'Commercial']
   };
   
   const projects = {
     es: [
       { title: 'Cocina de Roble', category: 'Cocinas', img: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=800' },
-      { title: 'Walk-in Closet', category: 'Closets', img: 'https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&q=80&w=800' },
-      { title: 'Mesa de Comedor', category: 'Comedores', img: 'https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&q=80&w=800' },
-      { title: 'Biblioteca de Nogal', category: 'Salas', img: 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&q=80&w=800' },
-      { title: 'Escritorio Ejecutivo', category: 'Oficinas', img: 'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&q=80&w=800' },
-      { title: 'Repisas Modernas', category: 'Salas', img: 'https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?auto=format&fit=crop&q=80&w=800' },
+      { title: 'Vestidor a Medida', category: 'Closets', img: 'https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&q=80&w=800' },
+      { title: 'Puerta Principal Sólida', category: 'Puertas', img: 'https://images.unsplash.com/photo-1512403754473-27835f7b9984?auto=format&fit=crop&q=80&w=800' },
+      { title: 'Lavaneta Flotante', category: 'Lavanetas', img: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800' },
+      { title: 'Mobiliario de Oficina', category: 'Comercial', img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800' },
+      { title: 'Lambrín Decorativo', category: 'Comercial', img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800' },
     ],
     en: [
       { title: 'Oak Island Kitchen', category: 'Kitchens', img: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=800' },
-      { title: 'Walk-in Wardrobe', category: 'Closets', img: 'https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&q=80&w=800' },
-      { title: 'Heirloom Dining Table', category: 'Dining', img: 'https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&q=80&w=800' },
-      { title: 'Walnut Library', category: 'Living', img: 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&q=80&w=800' },
-      { title: 'Executive Desk', category: 'Office', img: 'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&q=80&w=800' },
-      { title: 'Modern Pine Shelving', category: 'Living', img: 'https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?auto=format&fit=crop&q=80&w=800' },
+      { title: 'Bespoke Walk-in Closet', category: 'Closets', img: 'https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&q=80&w=800' },
+      { title: 'Solid Wood Entry Door', category: 'Doors', img: 'https://images.unsplash.com/photo-1512403754473-27835f7b9984?auto=format&fit=crop&q=80&w=800' },
+      { title: 'Floating Vanity', category: 'Vanities', img: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800' },
+      { title: 'Office Furniture', category: 'Commercial', img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800' },
+      { title: 'Decorative Wall Paneling', category: 'Commercial', img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800' },
     ]
   };
 
@@ -425,7 +425,7 @@ const Reviews = ({ lang }: SectionProps) => {
     es: [
       { name: 'Sofía Garza', role: 'Diseñadora de Interiores', text: 'La precisión en sus ensambles es inigualable. Entendieron perfectamente mi visión para la biblioteca y el acabado fue premium.', stars: 5 },
       { name: 'Alejandro Treviño', role: 'Cliente', text: 'Nuestra renovación de cocina fue rápida y sin problemas. Los gabinetes de roble son el centro de atención en los domingos familiares.', stars: 5 },
-      { name: 'Valeria Elizondo', role: 'Arquitecta', text: 'La Raíz Roja aporta un nivel de artesanía que es raro de encontrar en Monterrey hoy en día. Calidad verdaderamente excepcional.', stars: 5 },
+      { name: 'Valeria Elizondo', role: 'Arquitecta', text: 'La Raíz aporta un nivel de artesanía que es raro de encontrar en Monterrey hoy en día. Calidad verdaderamente excepcional.', stars: 5 },
     ],
     en: [
       { name: 'Sofía Garza', role: 'Interior Designer', text: 'The precision in their joinery is unmatched. They understood perfectly my vision for the library.', stars: 5 },
@@ -475,8 +475,8 @@ const Contact = ({ lang }: SectionProps) => {
       desc: 'Ya sea una pieza individual o una renovación interior completa, estamos listos para hacer realidad tu visión.',
       phoneLabel: 'Llama o Escribe',
       emailLabel: 'Correo',
-      areaLabel: 'Áreas de Servicio',
-      areas: 'Monterrey, San Pedro, Carretera Nacional',
+      areaLabel: 'Dirección',
+      areas: 'Paseo Dinastía 211, Residencial Dinastía, Monterrey N.L.',
       form: {
         first: 'Nombre',
         last: 'Apellido',
@@ -491,8 +491,8 @@ const Contact = ({ lang }: SectionProps) => {
       desc: "Whether it's a single heirloom piece or a full interior renovation, we're ready to bring your vision to life.",
       phoneLabel: 'Call or Text',
       emailLabel: 'Email Us',
-      areaLabel: 'Service Areas',
-      areas: 'Monterrey, San Pedro, Carretera Nacional',
+      areaLabel: 'Address',
+      areas: 'Paseo Dinastía 211, Residencial Dinastía, Monterrey N.L.',
       form: {
         first: 'First Name',
         last: 'Last Name',
@@ -634,7 +634,7 @@ const Footer = ({ lang }: SectionProps) => {
           <div className="h-8 w-auto bg-white p-1 rounded-sm">
             <img src="https://www.carpinterialaraiz.mx/wp-content/uploads/2022/01/Mesa-de-trabajo-1-2x-8-3.png" alt="La Raíz Logo" className="h-full w-full object-contain" />
           </div>
-          <span className="text-2xl font-serif font-semibold">La Raíz Roja</span>
+          <span className="text-2xl font-serif font-semibold">La Raíz</span>
         </div>
         
         <div className="flex gap-10 text-[11px] uppercase tracking-[0.3em] font-bold text-stone-500">
@@ -644,7 +644,7 @@ const Footer = ({ lang }: SectionProps) => {
         </div>
 
         <p className="text-stone-600 text-sm font-light">
-          © {new Date().getFullYear()} Carpintería La Raíz Roja. {lang === 'es' ? 'Todos los derechos reservados.' : 'All rights reserved.'}
+          © {new Date().getFullYear()} Carpintería La Raíz. {lang === 'es' ? 'Todos los derechos reservados.' : 'All rights reserved.'}
         </p>
       </div>
     </footer>
@@ -769,7 +769,7 @@ export default function App() {
         <section className="py-40 border-b border-stone-100 relative">
           <div className="absolute left-10 top-1/2 -translate-y-1/2 hidden 2xl:block">
             <span className="vertical-text text-[10px] uppercase tracking-[0.5em] text-stone-300">
-              La Raíz Roja — Monterrey, N.L.
+              La Raíz — Monterrey, N.L.
             </span>
           </div>
           <div className="max-w-5xl mx-auto px-6 text-center">
@@ -777,10 +777,10 @@ export default function App() {
               <>
                 <h2 className="text-5xl md:text-7xl font-serif tracking-tighter mb-12 leading-[1.1] font-light">
                   El placer de hacer el trabajo <br />
-                  <span className="italic font-medium text-rose-800">le aporta perfección.</span>
+                  <span className="italic font-medium text-stone-800">le aporta perfección.</span>
                 </h2>
                 <p className="text-xl text-stone-500 font-light leading-relaxed max-w-3xl mx-auto">
-                  En Carpintería La Raíz Roja, creemos que la madera es más que un simple material—es historia viva. 
+                  En Carpintería La Raíz, creemos que la madera es más que un simple material—es historia viva. 
                   Nuestros carpinteros expertos combinan técnicas tradicionales con diseño moderno para crear espacios increíbles.
                 </p>
               </>
@@ -788,10 +788,10 @@ export default function App() {
               <>
                 <h2 className="text-5xl md:text-7xl font-serif tracking-tighter mb-12 leading-[1.1] font-light">
                   The pleasure of doing the job <br />
-                  <span className="italic font-medium text-rose-800">brings perfection.</span>
+                  <span className="italic font-medium text-stone-800">brings perfection.</span>
                 </h2>
                 <p className="text-xl text-stone-500 font-light leading-relaxed max-w-3xl mx-auto">
-                  At Carpintería La Raíz Roja, we believe that wood is more than just a material—it's living history. 
+                  At Carpintería La Raíz, we believe that wood is more than just a material—it's living history. 
                   Our expert carpenters combine traditional techniques with modern design to create incredible spaces.
                 </p>
               </>
